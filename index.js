@@ -15,6 +15,7 @@ var $result_fname = document.getElementById(`result_fname`);
 var $result_lname = document.getElementById(`result_lname`);
 var $result_email = document.getElementById(`result_email`);
 var $result_password = document.getElementById(`result_password`);
+var $btn__exit = document.getElementById(`btn__exit`);
 
 
 
@@ -28,6 +29,16 @@ $btn.addEventListener(`click`, function () {
     $result_email.innerHTML =`Email: ${$email.value}`;
     $result_password.style.color= `orange`;
     $result_password.innerHTML =`Password: ${$password.value}`;
+})
+
+    
+
+$btn__exit.addEventListener (`click`, function(){
+    $result_menu.classList.toggle(`-translate-y-[600px]`);
+    $FName.value= ``
+    $LName.value = ``
+    $email.value =``
+    $password.value = ``
 })
 
 $eye.onclick = function() {
@@ -58,6 +69,7 @@ $FName.addEventListener(`input`, function(e) {
     if (regOnlyLetters.test(value)){
         $error_FName.textContent =  ``
     }
+
 
     else if (number.test(value)) {
         $error_FName.style.color = `red`
@@ -108,7 +120,7 @@ $email.addEventListener(`input`, function(e) {
 $password.addEventListener(`input`, function(e) {
     var value =e.target.value;
 
-    var regOnlyPassword = new RegExp("(?=.*[!@#$%^&*])");
+    var regOnlyPassword = new RegExp("(?=.*[!@#$%^&*;:№?())])");
     if (regOnlyPassword.test(value)){
         $error_password.textContent = ` `
     }
