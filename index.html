@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./style.js"></script>
+
+    <title>Registration page</title>
+</head>
+<body class="box font-alata">
+    <div class="bg-bg-round relative xsm:text-center lg:text-start lg:h-screen bg-pink pt-20">
+        <div class="container lg:grid lg:grid-cols-2">
+            <div class="flex flex-col justify-center">
+                <h1 class="text-6xl xsm:w-full w-5/6 text-white">Learn to code by watching others</h1>
+                <p class="pt-4 text-xl text-white opacity-60">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+                    but understanding how developers think is invaluable.</p>
+            </div> 
+            <div class="relative">           
+                <div class="bg-blue mb-4 h-12 rounded-md flex justify-center items-center shadow-shadow text-white ">
+                    <p>Try it free 7 days <span class="opacity-50">then $20/mo.thereafter</span> </p>
+                </div>
+                <form id="form" class=" relative flex text-center flex-col gap-8 p-8 h-[32rem] w-full bg-white rounded-md" action="">
+                    <label class="relative" for="">
+                        <input id="FName" class="border-2 px-8 rounded-md h-12 w-10/12 border-border placeholder:opacity-70" minlength="5" placeholder="First Name" required type="text">
+                        <br> <span id="error_FName"></span>
+                    </label>
+                    <label for="">
+                        <input id="LName" class="border-2 px-8 rounded-md h-12 w-10/12 border-border placeholder:opacity-70" minlength="5" placeholder="Last Name" required type="text">
+                        <br> <span id="error_LName"></span>
+                    </label>
+                    <label for="">
+                        <input id="email" class="border-2 px-8 rounded-md h-12 w-10/12 border-border placeholder:opacity-70" placeholder="Email Address" required type="email">
+                        <br> <span id="error_email"></span>
+                    </label>
+                    <label class="relative" for="">
+                        <input id="password" class="border-2 px-8 rounded-md h-12 w-10/12 border-border placeholder:opacity-70" minlength="8" placeholder="Password" required type="password">
+                        <i id="eye" class="absolute right-20 top-4 fa-regular fa-eye cursor-pointer"></i>
+                        <br> <span id="error_password"></span>
+                    </label>
+
+                    <button id="btn" class="bg-btnBg rounded-md py-4 w-10/12 tracking-widest mx-auto text-white">
+                        CLAIM YOUR FREE TRIAL
+                    </button>
+                    
+                    <p class="text-sm opacity-50"  >By clicking the button, you are agreeing to our <span class="text-pink"> terms and services. </span>  </p>
+                </form>
+
+                
+
+            </div>
+            <ul id="result_menu" class="result absolute text-white text-2xl mx-56 top-20 transition duration-300 delay-150 -translate-y-[600px] p-20 bg-gray-700 flex flex-col gap-8 h-96 w-[700px] ">
+                <li id="result_fname">First Name:</li>
+                <li id="result_lname">Last Name:</li>
+                <li id="result_email">Email:</li>
+                <li id="result_password">Password:</li>
+            </ul>
+        </div>
+    </div>
+    
+   
+    <script src="./index.js"></script>
+</body>
+</html>
