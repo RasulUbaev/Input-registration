@@ -35,10 +35,7 @@ $btn.addEventListener(`click`, function () {
 
 $btn__exit.addEventListener (`click`, function(){
     $result_menu.classList.toggle(`-translate-y-[600px]`);
-    $FName.value= ``
-    $LName.value = ``
-    $email.value =``
-    $password.value = ``
+
 })
 
 $eye.onclick = function() {
@@ -55,8 +52,10 @@ $eye.onclick = function() {
 
 $form.addEventListener(`submit`, function (e){
     e.preventDefault()
-
-
+    $FName.value= ``
+    $LName.value = ``
+    $email.value =``
+    $password.value = ``
 })
 
 
